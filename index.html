@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trail Blaze Media Solutions</title>
+<meta name="description" content="Trail Blaze Media Solutions is the editorial engine behind Trail Blaze Local. Helping independent businesses earn attention, not buy it.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Trail Blaze Media Solutions">
+<meta property="og:description" content="The editorial engine behind Trail Blaze Local.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com">
+<meta property="og:image" content="https://picsum.photos/1200/630">
+
+<!-- Favicon -->
+<link rel="icon" href="https://picsum.photos/32/32">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Trail Blaze Media Solutions",
+ "url": "https://yourdomain.com",
+ "description": "Editorial infrastructure powering Trail Blaze Local.",
+ "sameAs": ["https://trailblazelocal.com"]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a1628;color:#f5f0e8;overflow-x:hidden;scroll-behavior:smooth}
+
+/* NAV */
+
+.nav{position:sticky;top:0;background:rgba(10,22,40,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,169,96,0.15);z-index:1000}
+.nav-inner{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:white}
+.logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#c8a960,#e0c97a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;color:#0a1628}
+.logo-text{font-family:'Playfair Display',serif;font-weight:600}
+.logo-text span{color:#c8a960}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;color:rgba(245,240,232,0.7);font-size:14px;transition:0.3s}
+.nav-links a:hover{color:#c8a960}
+.nav-cta{border:1px solid #c8a960;padding:8px 20px;border-radius:6px;color:#c8a960!important}
+.nav-cta:hover{background:#c8a960;color:#0a1628!important}
+
+/* MOBILE MENU */
+.menu-toggle{display:none;flex-direction:column;cursor:pointer;gap:4px}
+.menu-toggle span{width:24px;height:2px;background:white;transition:0.3s}
+
+@media(max-width:768px){
+.nav-links{position:absolute;top:70px;left:0;width:100%;background:#0a1628;flex-direction:column;padding:24px;display:none}
+.nav-links.active{display:flex}
+.menu-toggle{display:flex}
+}
+
+/* HERO */
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px}
+.hero-content{max-width:800px}
+.badge{display:inline-block;padding:8px 20px;border:1px solid rgba(200,169,96,0.3);border-radius:50px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#c8a960;margin-bottom:32px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,64px);margin-bottom:24px}
+.hero h1 span{color:#c8a960}
+.hero p{font-size:18px;color:rgba(245,240,232,0.65);max-width:600px;margin:auto;line-height:1.7}
+
+.divider{height:1px;max-width:900px;margin:80px auto;background:linear-gradient(90deg,transparent,rgba(200,169,96,0.3),transparent)}
+
+/* SECTIONS */
+
+.section{max-width:900px;margin:auto;padding:0 24px 100px;opacity:0;transform:translateY(40px);transition:all 0.8s ease}
+.section.visible{opacity:1;transform:translateY(0)}
+.label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c8a960;margin-bottom:16px}
+.section h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);margin-bottom:32px}
+.section p{font-size:17px;line-height:1.8;color:rgba(245,240,232,0.6);margin-bottom:20px}
+.section strong{color:white}
+.quote{background:rgba(200,169,96,0.05);border-left:3px solid #c8a960;padding:32px;margin:40px 0;border-radius:0 12px 12px 0;font-family:'Playfair Display',serif;font-style:italic}
+
+/* PILLARS */
+
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px;margin-top:48px}
+.pillar{background:rgba(255,255,255,0.02);border:1px solid rgba(200,169,96,0.1);border-radius:12px;padding:36px 28px;transition:0.4s}
+.pillar:hover{transform:translateY(-6px);border-color:#c8a960}
+.pillar-number{font-family:'Playfair Display',serif;font-size:32px;color:#c8a960;opacity:0.4;margin-bottom:16px}
+.pillar h3{font-family:'Playfair Display',serif;margin-bottom:14px}
+
+/* CTA */
+
+.cta{text-align:center;padding:100px 24px}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,40px);margin-bottom:20px}
+.cta p{color:rgba(245,240,232,0.6);margin-bottom:40px}
+.button{padding:14px 32px;border-radius:8px;background:linear-gradient(135deg,#c8a960,#e0c97a);color:#0a1628;text-decoration:none;font-weight:500;transition:0.3s}
+.button:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,169,96,0.25)}
+
+/* FOOTER */
+
+footer{border-top:1px solid rgba(200,169,96,0.1);padding:40px 24px;text-align:center;font-size:14px;color:rgba(245,240,232,0.35)}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">TB</div>
+      <div class="logo-text">Trail Blaze <span>Media Solutions</span></div>
+    </a>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#model">Our Model</a></li>
+      <li><a href="#pillars">Pillars</a></li>
+      <li><a href="https://trailblazelocal.com/home" target="_blank" class="nav-cta">Visit Trail Blaze Local →</a></li>
+    </ul>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="badge">The Company Behind Trail Blaze Local</div>
+    <h1>We Believe Local Businesses Deserve a <span>Louder Voice</span></h1>
+    <p>Trail Blaze Media Solutions is the editorial engine behind Trail Blaze Local.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="philosophy">
+  <div class="label">Our Philosophy</div>
+  <h2>Why We Built This</h2>
+  <p>The digital landscape was built for brands with big budgets.</p>
+  <p><strong>We exist to change that.</strong></p>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="model">
+  <div class="label">The Editorial Model</div>
+  <h2>Content That Earns Attention, Not Buys It</h2>
+  <p>Every business we work with is presented through editorial content.</p>
+  <div class="quote">“People don't trust adverts. They trust credible voices.”</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="pillars">
+  <div class="label">What Drives Us</div>
+  <h2>Three Pillars Behind Everything We Do</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-number">01</div>
+      <h3>Editorial Integrity</h3>
+      <p>If we wouldn't read it, we don't publish it.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-number">02</div>
+      <h3>Local First</h3>
+      <p>Communities are built on trust.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-number">03</div>
+      <h3>Long-Term Value</h3>
+      <p>Everything compounds.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to See How It Works?</h2>
+  <p>Explore Trail Blaze Local and start getting visibility.</p>
+  <a href="https://trailblazelocal.com/home" target="_blank" class="button">Visit Trail Blaze Local →</a>
+</section>
+
+<footer>
+  © 2026 Trail Blaze Media Solutions. All rights reserved.
+</footer>
+
+<script>
+/* Mobile Menu */
+document.getElementById('menuToggle').addEventListener('click',function(){
+document.getElementById('navLinks').classList.toggle('active');
+});
+
+/* Scroll Fade In */
+const sections=document.querySelectorAll('.section');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('visible');}
+});
+},{threshold:0.2});
+sections.forEach(section=>observer.observe(section));
+</script>
+
+</body>
+</html>
